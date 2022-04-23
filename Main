@@ -1,0 +1,150 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Sirius HUB", "Synapse")
+
+local Tab = Window:NewTab("Script Hub")
+
+local Section = Tab:NewSection("Scripts")
+
+Section:NewButton("Domain X", "Domain X, A good script hub made by Shlex", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+end)
+
+Section:NewButton("Piano Player", "Goto your workspace and add the midi's", function()
+	loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/MidiPlayer/main/package.lua"))()
+end)
+
+Section:NewButton("Blowing Script", "Press 'q' in robowling after bowling", function()
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+
+	local Mouse = LocalPlayer:GetMouse()
+	local Character = LocalPlayer.Character
+	local HRP = Character.HumanoidRootPart
+
+	function GetLanes()
+		for i,v in pairs(game.Workspace.FunctionalAssets.BowlingLanes.Lanes:GetChildren()) do
+			for a,b in pairs(v.Scoring.Screen2.BowlingLaneBoard.BoardGui.ImageLabel:GetChildren()) do
+				if b.Name == game.Players.LocalPlayer.Name then
+					return b.Parent.Parent.Parent.Parent.Parent.Parent
+				end
+			end
+		end
+	end
+
+	Mouse.KeyDown:Connect(function(Key)
+		Key = Key:lower()
+		if Key == "q" then
+			for i,v in pairs(GetLanes().FunctioningAssets.Pins:GetChildren()) do
+				v.Rotation = Vector3.new(90,0,0)
+			end
+		end
+	end)
+end)
+
+Section:NewButton("Infinite Yield", "Old roblox admin script that works good", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section:NewButton("JailBreak AutoFarm", "A Nice Jail Break AutoFarm", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/wawsdasdacx/ohascriptnrrewading/main/jbsaxcriptidk1"))();
+end)
+
+-- Start of the second Tab Holder
+
+local Tab = Window:NewTab("Local Player")
+
+local Section = Tab:NewSection("Local Player Scripts")
+
+Section:NewSlider("WalkSpeed", "Change's the players walkspeed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewButton("Graphics Enhancer", "Roblox Graphics Enhancer", function()
+	local light = game.Lighting
+	for i, v in pairs(light:GetChildren()) do
+		v:Destroy()
+	end
+
+	local ter = workspace.Terrain
+	local color = Instance.new("ColorCorrectionEffect")
+	local bloom = Instance.new("BloomEffect")
+	local sun = Instance.new("SunRaysEffect")
+	local blur = Instance.new("BlurEffect")
+
+	color.Parent = light
+	bloom.Parent = light
+	sun.Parent = light
+	blur.Parent = light
+
+	local config = {
+
+		Terrain = true;
+		ColorCorrection = true;
+		Sun = true;
+		Lighting = true;
+		BloomEffect = true;
+
+	}
+
+	-- settings {
+
+	color.Enabled = false
+	color.Contrast = 0.15
+	color.Brightness = 0.1
+	color.Saturation = 0.25
+	color.TintColor = Color3.fromRGB(255, 222, 211)
+
+	bloom.Enabled = false
+	bloom.Intensity = 0.1
+
+	sun.Enabled = false
+	sun.Intensity = 0.2
+	sun.Spread = 1
+
+	bloom.Enabled = false
+	bloom.Intensity = 0.05
+	bloom.Size = 32
+	bloom.Threshold = 1
+
+	blur.Enabled = false
+	blur.Size = 6
+
+	-- settings }
+
+
+	if config.ColorCorrection then
+		color.Enabled = true
+	end
+
+
+	if config.Sun then
+		sun.Enabled = true
+	end
+
+
+	if config.Terrain then
+		-- settings {
+		ter.WaterColor = Color3.fromRGB(10, 10, 24)
+		ter.WaterWaveSize = 0.15
+		ter.WaterWaveSpeed = 22
+		ter.WaterTransparency = 1
+		ter.WaterReflectance = 0.05
+		-- settings }
+	end
+
+
+	if config.Lighting then
+		-- settings {
+		light.Ambient = Color3.fromRGB(0, 0, 0)
+		light.Brightness = 4
+		light.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
+		light.ColorShift_Top = Color3.fromRGB(0, 0, 0)
+		light.ExposureCompensation = 0
+		light.FogColor = Color3.fromRGB(132, 132, 132)
+		light.GlobalShadows = true
+		light.OutdoorAmbient = Color3.fromRGB(112, 117, 128)
+		light.Outlines = false
+		-- settings }
+	end
+end)
