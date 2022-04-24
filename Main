@@ -161,3 +161,11 @@ VerifiedScripts:AddButton({
 		loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/KiJinGaming/FreeScript/main/KJHub.lua"))();
 	end    
 })
+
+local CreditsTab = Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://7072717857",
+	PremiumOnly = false
+})
+
+CreditsTab:AddLabel("Created By: SimplyAwoken#0694")
