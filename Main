@@ -1,11 +1,10 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("Sirius HUB", "Synapse")
+local Window = Library.CreateLib("Sirius Hub V1.2", "Ocean")
 
 local Tab = Window:NewTab("Script Hub")
 
 local Section = Tab:NewSection("Scripts")
-
 Section:NewButton("Domain X", "Domain X, A good script hub made by Shlex", function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
 end)
@@ -45,9 +44,16 @@ end)
 Section:NewButton("Infinite Yield", "Old roblox admin script that works good", function()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
-
 Section:NewButton("JailBreak AutoFarm", "A Nice Jail Break AutoFarm", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/wawsdasdacx/ohascriptnrrewading/main/jbsaxcriptidk1"))();
+end)
+
+Section:NewButton("Fe Hats", "A Hat script", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/4B4fktPS", true))()
+end)
+
+Section:NewButton("Fe Joy", "The Joy Script but local", function()
+	loadstring(game:HttpGetAsync("https://pastebin.com/raw/LEAQuKj0"))()
 end)
 
 -- Start of the second Tab Holder
