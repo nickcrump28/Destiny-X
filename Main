@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Sirius Hub 0.2B"})
+local Window = OrionLib:MakeWindow({Name = "Sirius Hub 0.3B"})
 
 game.Players.PlayerAdded:Connect(function(player)
 	if player:IsFriendsWith(game.Players.LocalPlayer.UserId) then
