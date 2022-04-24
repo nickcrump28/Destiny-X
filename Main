@@ -162,6 +162,13 @@ VerifiedScripts:AddButton({
 	end    
 })
 
+VerifiedScripts:AddButton({
+	Name = "Backdoor.exe",
+	Callback = function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua'),true))()
+	end    
+})
+
 local CreditsTab = Window:MakeTab({
 	Name = "Credits",
 	Icon = "rbxassetid://7072717857",
