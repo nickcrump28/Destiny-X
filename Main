@@ -1257,7 +1257,7 @@ end)
 
 -- Start of the second Tab Holder
 
-local Tab = Window:NewTab("Local Player")
+local Tab = Window:NewTab("Sliders")
 
 local Section = Tab:NewSection("Local Player Scripts")
 
@@ -1265,6 +1265,7 @@ Section:NewSlider("WalkSpeed", "Change's the players walkspeed", 500, 16, functi
 	game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
 end)
 
+local Section = Tab:NewSection("Buttons")
 Section:NewButton("Respawn", "Respawns the given player", function()
 	game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end)
