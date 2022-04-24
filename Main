@@ -56,9 +56,6 @@ Section:NewButton("Fe Joy", "The Joy Script but local", function()
 	loadstring(game:HttpGetAsync("https://pastebin.com/raw/LEAQuKj0"))()
 end)
 
-Section:NewButton("Fe Krystal Dance", "Good Animations", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/nickcrump28/Krystle/main/Main',true))()
-end)
 
 -- Start of the second Tab Holder
 
