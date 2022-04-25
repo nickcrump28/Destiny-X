@@ -7,7 +7,7 @@ game.Players.PlayerAdded:Connect(function(player)
 		OrionLib:MakeNotification({
 			Name = "Friend Joined!",
 			Content = player.Name.." has joined the game!",
-			Image = "rbxassetid://4483345998",
+			Image = "rbxassetid://7072988037",
 			Time = 5
 		})
 	end
